@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        tools:context=".view.RestraurantActivity">
+
+        <ImageView
+            android:id="@+id/imageView_restaurantBanner"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_launcher_background"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView_restaurantName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:text="@string/restaurant_name"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView_restaurantBanner" />
+
+        <TextView
+            android:id="@+id/textView_neighborhood"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/neighborhood"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView_restaurantName" />
+
+        <TextView
+            android:id="@+id/textView_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/address"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView_neighborhood" />
+
+        <TextView
+            android:id="@+id/textView_cuisineType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="8dp"
+            android:text="Cuisine Type"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView_address" />
+
+        <TextView
+            android:id="@+id/textView_menu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="4dp"
+            android:paddingBottom="4dp"
+            android:text="@string/menu"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView_cuisineType" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView_menuItems"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView_menu"
+            tools:listitem="@layout/item_menu" />
+
+        <TextView
+            android:id="@+id/textView_operatingHours"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/operating_hours"
+            android:textSize="20sp"
+            android:paddingTop="8dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/recyclerView_menuItems" />
+
+        <TextView
+            android:id="@+id/textView_mon"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/mon"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView_operatingHours" />
+
+        <TextView
+            android:id="@+id/textView_timeMon"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/textView_mon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView_mon"
+            app:layout_constraintTop_toTopOf="@+id/textView_mon" />
+
+        <TextView
+            android:id="@+id/textView_tue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/tue"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView_mon" />
+
+        <TextView
+            android:id="@+id/textView_timeTue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/textView_tue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView_tue"
+            app:layout_constraintTop_toTopOf="@+id/textView_tue" />
+
+        <TextView
+            android:id="@+id/textView_wed"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/wed"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView_tue" />
+
+        <TextView
+            android:id="@+id/textView_timeWed"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/textView_wed"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView_wed"
+            app:layout_constraintTop_toTopOf="@+id/textView_wed" />
+
+        <TextView
+            android:id="@+id/textView_thu"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/thu"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView_wed" />
+
+        <TextView
+            android:id="@+id/textView_timeThu"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/textView_thu"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView_thu"
+            app:layout_constraintTop_toTopOf="@+id/textView_thu" />
+
+        <TextView
+            android:id="@+id/textView_fri"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/fri"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView_thu" />
+
+        <TextView
+            android:id="@+id/textView_timeFri"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/textView_fri"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView_fri"
+            app:layout_constraintTop_toTopOf="@+id/textView_fri" />
+
+        <TextView
+            android:id="@+id/textView_sat"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/sat"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView_fri" />
+
+        <TextView
+            android:id="@+id/textView_timeSat"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/textView_sat"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView_sat"
+            app:layout_constraintTop_toTopOf="@+id/textView_sat" />
+
+        <TextView
+            android:id="@+id/textView_sun"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/sun"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView_sat" />
+
+        <TextView
+            android:id="@+id/textView_timeSun"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/textView_sun"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView_sun"
+            app:layout_constraintTop_toTopOf="@+id/textView_sun" />
+
+        <TextView
+            android:id="@+id/textView_reviews"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/reviews"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView_sun"
+            android:paddingTop="16sp"
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView_reviews"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:listitem="@layout/item_commnet"
+            app:layout_constraintTop_toBottomOf="@id/textView_reviews" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Cricbuzz Assignment</string>
+    <string name="restaurant_name">Restaurant Name</string>
+    <string name="neighborhood">Neighborhood</string>
+    <string name="address">Address</string>
+    <string name="menu">Menu</string>
+    <string name="price">Price</string>
+    <string name="mon">Mon - </string>
+    <string name="tue">Tue - </string>
+    <string name="wed">Wed - </string>
+    <string name="thu">Thu - </string>
+    <string name="fri">Fri - </string>
+    <string name="sat">Sat - </string>
+    <string name="sun">Sun - </string>
+    <string name="operating_hours">Operating Hours</string>
+    <string name="reviews">Reviews</string>
+    <string name="search">Search</string>
+</resources>
